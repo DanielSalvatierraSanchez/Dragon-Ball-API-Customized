@@ -1,0 +1,22 @@
+main {
+    min-height: 90svh;
+}
+
+.home-container,
+.characters-container,
+.character-container,
+.transformations-container,
+.notFound-container {
+    min-height: 82svh;
+    padding-top: 50px;
+}
+
+@media (width >= 652px) {
+    .home-container,
+    .characters-container,
+    .character-container,
+    .transformations-container,
+    .notFound-container {
+        min-height: 87svh;
+    }
+}

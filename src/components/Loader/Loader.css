@@ -1,0 +1,20 @@
+.loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100px;
+    height: 100px;
+    margin: auto;
+    margin-top: 200px;
+    animation: ball 1s infinite steps(100);
+}
+
+.loader img {
+    width: 200px;
+}
+
+@keyframes ball {
+    100% {
+        transform: rotate(1turn);
+    }
+}

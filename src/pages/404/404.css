@@ -1,0 +1,13 @@
+.notFound-container {
+    background-color: var(--db-color-b);
+    color: var(--db-color-w);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+.notFound-container a {
+    color: var(--db-color-w);
+}

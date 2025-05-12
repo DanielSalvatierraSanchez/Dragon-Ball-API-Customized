@@ -1,7 +1,57 @@
+@font-face {
+    font-family: "saiyan sans";
+    src: url("/assets/Saiyan-Sans.ttf") format("truetype");
+    font-style: normal;
+    font-weight: 700;
+}
+
+:root {
+    --db-color-one: #6de1d2;
+    --db-color-two: #ffd63a;
+    --db-color-three: #ffa955;
+    --db-color-four: #f75a5a;
+    --db-color-b: #000;
+    --db-color-w: #fff;
+    --db-shadow-one: 0 0 20px var(--db-color-b), 0 0 30px var(--db-color-two), 0 0 40px var(--db-color-two), 0 0 50px var(--db-color-two),
+        0 0 60px var(--db-color-two), 0 0 70px var(--db-color-two), 0 0 80px var(--db-color-two);
+    --db-shadow-two: 0 0 10px var(--db-color-b);
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    text-decoration: none;
     list-style: none;
+    text-align: center;
+    text-decoration: none;
+    font-family: saiyan sans, sans-serif;
+    color: var(--db-color-two);
+}
+
+body {
+    background-color: var(--db-color-w);
+    background-size: auto 100%;
+    background-position: center;
+}
+
+@keyframes parpadeo {
+    0% {
+        text-shadow: var(--db-shadow-one);
+        visibility: visible;
+    }
+    50% {
+        visibility: hidden;
+    }
+}
+
+@keyframes flota {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

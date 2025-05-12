@@ -1,0 +1,14 @@
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.data a {
+    padding: 5px 20px;
+}
+
+.data img {
+    width: 20px;
+    height: 20px;
+}
