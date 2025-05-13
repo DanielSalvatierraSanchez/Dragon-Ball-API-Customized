@@ -1,4 +1,4 @@
-export const INITIAL_STATE = {
+export const INITIAL_STATE_CHARACTERS = {
     firstPage: 1,
     lastPage: 1,
     page: 1,
@@ -8,7 +8,7 @@ export const INITIAL_STATE = {
     characters: []
 };
 
-export const fetchReducer = (state, action) => {
+export const charactersReducer = (state, action) => {
     switch (action.type) {
         case "FIRST_PAGE":
             return { ...state, page: state.firstPage };

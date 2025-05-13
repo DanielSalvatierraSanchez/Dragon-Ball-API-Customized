@@ -24,3 +24,6 @@ EXTRAS =>
 -
 
 CONTINUAR =>
+
+-   con reducer character by id
+-   revisar codigo de las cartas por si puedo hacer un custom hook para reutilizarlo

@@ -3,15 +3,15 @@ import React, { useEffect, useReducer } from "react";
 import Loader from "../../components/Loader/Loader";
 import CharacterCard from "../../components/Cards/CharactersCard/CharactersCard";
 import Pagination from "../../components/Pagination/Pagination";
-import { fetchReducer, INITIAL_STATE } from "../../hooks/ReducerCharacters";
-import { fetchApi } from "../../hooks/FetchAPI";
+import { charactersReducer, INITIAL_STATE_CHARACTERS } from "../../hooks/ReducerCharacters";
+import { fetchApiCharacters } from "../../api/FetchApi";
 
 const Characters = () => {
-    const [state, dispatch] = useReducer(fetchReducer, INITIAL_STATE);
+    const [state, dispatch] = useReducer(charactersReducer, INITIAL_STATE_CHARACTERS);
     const { page, lastPage, limit, loading, characters } = state;
 
     useEffect(() => {
-        fetchApi(dispatch, page, limit);
+        fetchApiCharacters(dispatch, page, limit);
     }, [page, limit]);
 
     return (
