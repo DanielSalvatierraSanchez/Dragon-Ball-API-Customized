@@ -22,3 +22,5 @@ EXTRAS =>
 
 -   activar audio de la pages/home.jsx y si cambio el audio y lo pongo completo mucho mejor!!!
 -
+
+CONTINUAR =>

@@ -1,26 +1,18 @@
 import "./Characters.css";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useReducer } from "react";
 import Loader from "../../components/Loader/Loader";
 import CharacterCard from "../../components/CharacterCard/CharacterCard";
 import Pagination from "../../components/Pagination/Pagination";
+import { fetchReducer, INITIAL_STATE } from "../../hooks/ReducerCharacters";
+import { fetchApi } from "../../hooks/FetchAPI";
 
 const Characters = () => {
-    const [characters, setCharacters] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [page, setPage] = useState(1);
-    const [limit, setLimit] = useState(1);
+    const [state, dispatch] = useReducer(fetchReducer, INITIAL_STATE);
+    const { page, lastPage, limit, loading, characters } = state;
 
     useEffect(() => {
-        setLoading(true);
-        setCharacters([]);
-        fetch(`https://dragonball-api.com/api/characters?page=${page}&limit=10`)
-            .then((res) => res.json())
-            .then((res) => {
-                setCharacters(res.items);
-                setLoading(false);
-                setLimit(res.meta.totalPages);
-            });
-    }, [page]);
+        fetchApi(dispatch, page, limit);
+    }, [page, limit]);
 
     return (
         <div className='characters-container'>
@@ -29,7 +21,7 @@ const Characters = () => {
                 {characters.map((character) => (
                     <CharacterCard key={character.id} character={character} />
                 ))}
-                <Pagination page={page} setPage={setPage} limit={limit} />
+                <Pagination page={page} lastPage={lastPage} dispatch={dispatch} />
             </div>
         </div>
     );
