@@ -1,7 +1,7 @@
 import "./Characters.css";
 import React, { useEffect, useReducer } from "react";
 import Loader from "../../components/Loader/Loader";
-import CharacterCard from "../../components/CharacterCard/CharacterCard";
+import CharacterCard from "../../components/Cards/CharactersCard/CharactersCard";
 import Pagination from "../../components/Pagination/Pagination";
 import { fetchReducer, INITIAL_STATE } from "../../hooks/ReducerCharacters";
 import { fetchApi } from "../../hooks/FetchAPI";

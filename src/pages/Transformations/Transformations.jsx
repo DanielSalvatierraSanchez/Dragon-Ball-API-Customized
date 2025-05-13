@@ -2,6 +2,7 @@ import "./Transformations.css";
 import Loader from "../../components/Loader/Loader";
 import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
+import TransformationsCard from "../../components/Cards/TransformationsCard/TransformationsCard";
 
 const Transformations = () => {
     const { id } = useParams();
@@ -28,11 +29,7 @@ const Transformations = () => {
                 <audio className='audio' src='/assets/SuperSaiyan.mp3' autoPlay></audio>
                 {/* <h2 className='transformations-title'>Transformaciones de {character.name}</h2> */}
                 {transformations.map((evo) => (
-                    <div className='transformation-card'>
-                        <h2 className='transformation-name'>{evo.name}</h2>
-                        <p className='transformation-ki'>Ki: {evo.ki}</p>
-                        <img className='transformation-image' src={evo.image} alt={evo.name} />
-                    </div>
+                    <TransformationsCard evo={evo} />
                 ))}
                 <div className='link-back-container'>
                     <Link to={`/characters/${id}`}>
