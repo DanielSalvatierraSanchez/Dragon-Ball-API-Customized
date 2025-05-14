@@ -2,7 +2,7 @@ import "./CharactersCard.css";
 import { Link } from "react-router-dom";
 import React from "react";
 
-const CharacterCard = ({ character }) => {
+const CharactersCard = ({ character }) => {
     return (
         <div className='characters-card'>
             <Link to={`/characters/${character.id}`} key={character.id}>
@@ -13,4 +13,4 @@ const CharacterCard = ({ character }) => {
     );
 };
 
-export default CharacterCard;
+export default CharactersCard;

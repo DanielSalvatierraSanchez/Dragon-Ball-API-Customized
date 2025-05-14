@@ -1,10 +1,10 @@
 import "./Characters.css";
 import React, { useEffect, useReducer } from "react";
 import Loader from "../../components/Loader/Loader";
-import CharacterCard from "../../components/Cards/CharactersCard/CharactersCard";
 import Pagination from "../../components/Pagination/Pagination";
 import { charactersReducer, INITIAL_STATE_CHARACTERS } from "../../hooks/ReducerCharacters";
-import { fetchApiCharacters } from "../../api/FetchApi";
+import CharactersCard from "../../components/Cards/CharactersCard/CharactersCard";
+import { fetchApiCharacters } from "../../api/FetchApiCharacters";
 
 const Characters = () => {
     const [state, dispatch] = useReducer(charactersReducer, INITIAL_STATE_CHARACTERS);
@@ -16,13 +16,11 @@ const Characters = () => {
 
     return (
         <div className='characters-container'>
-            <div className='characters-cards'>
-                {loading && <Loader />}
-                {characters.map((character) => (
-                    <CharacterCard key={character.id} character={character} />
-                ))}
-                <Pagination page={page} lastPage={lastPage} dispatch={dispatch} />
-            </div>
+            {loading && <Loader />}
+            {characters.map((character) => (
+                <CharactersCard key={character.id} character={character} />
+            ))}
+            <Pagination page={page} lastPage={lastPage} dispatch={dispatch} />
         </div>
     );
 };

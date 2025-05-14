@@ -12,16 +12,3 @@ export const fetchApiCharacters = async (dispatch, page, limit) => {
         dispatch({ type: "ERROR", payload: error.message });
     }
 };
-
-export const fetchApiCharacterById = async (dispatch, id) => {
-    dispatch({ type: "LOADING" });
-
-    try {
-        const res = await fetch(`https://dragonball-api.com/api/characters/${id}`);
-        const response = await res.json();
-
-        dispatch({ type: "GET_CHARACTER_BY_ID", payload: response.items });
-    } catch (error) {
-        dispatch({ type: "ERROR", payload: error.message });
-    }
-};
