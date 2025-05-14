@@ -1,7 +1,7 @@
 export const INITIAL_STATE_CHARACTER_BY_ID = {
     character: [],
     transformations: [],
-    loading: false,
+    loading: true,
     error: null
 };
 
@@ -12,7 +12,7 @@ export const characterByIdReducer = (state, action) => {
         case "GET_TRANSFORMATIONS":
             return { ...state, transformations: action.payload };
         case "LOADING":
-            return { ...state, loading: true };
+            return { ...state, loading: false };
         case "ERROR":
             return { ...state, error: action.payload };
         default:

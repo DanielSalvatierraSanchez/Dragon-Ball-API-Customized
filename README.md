@@ -8,7 +8,7 @@
 -   NO hay re-renderizaciones innecesarias
 -   Componentes correctos
 
-Hoja de ruta =>
+Refactorizar en el proyecto anterior =>
 
 -   Lo principal es añadir el hook useReducer y un custom hook.
 -   Añadir un formulario para crear personajes que no estén en la API,
@@ -25,6 +25,5 @@ EXTRAS =>
 
 CONTINUAR =>
 
--   reducer de transformations
 -   revisar codigo de las cartas por si puedo hacer un custom hook para reutilizarlo
--   link de volver a personajes hacer custom hook y poner en transformations
+-   repasar loading tru o false de reducers

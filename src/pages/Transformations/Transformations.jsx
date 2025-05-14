@@ -5,6 +5,7 @@ import { Link, useParams } from "react-router-dom";
 import TransformationsCard from "../../components/Cards/TransformationsCard/TransformationsCard";
 import { fetchApiCharacterById } from "../../api/FetchApiCharacterById";
 import { characterByIdReducer, INITIAL_STATE_CHARACTER_BY_ID } from "../../hooks/ReducerCharacterById";
+import GoBack from "../../components/GoBack/GoBack";
 
 const Transformations = () => {
     const { id } = useParams();
@@ -16,7 +17,6 @@ const Transformations = () => {
     }, [id]);
 
     if (!transformations) return <Loader />;
-
     return (
         <>
             <div className='transformations-container'>
@@ -26,14 +26,9 @@ const Transformations = () => {
                 {transformations.map((evo) => (
                     <TransformationsCard evo={evo} />
                 ))}
-                <div className='link-back-container'>
-                    <Link to={`/characters/${id}`}>
-                        <div className='link-back'>
-                            <img src='/assets/ball.webp' />
-                            Volver a {character.name}
-                        </div>
-                    </Link>
-                </div>
+                <Link to={`/characters/${id}`}>
+                    <GoBack src='/assets/ball.webp' text='Volver a' character={character.name} />
+                </Link>
             </div>
         </>
     );

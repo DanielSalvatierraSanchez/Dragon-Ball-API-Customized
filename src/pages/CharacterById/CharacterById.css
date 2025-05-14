@@ -21,7 +21,7 @@
     animation: parpadeo 1s infinite;
 }
 
-.link-back {
+/* .link-back {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -35,4 +35,4 @@
 .link-back img {
     width: 30px;
     height: 30px;
-}
+} */

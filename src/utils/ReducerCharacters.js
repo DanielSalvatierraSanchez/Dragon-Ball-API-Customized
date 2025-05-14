@@ -3,7 +3,7 @@ export const INITIAL_STATE_CHARACTERS = {
     lastPage: 1,
     page: 1,
     limit: 10,
-    loading: false,
+    loading: true,
     error: null,
     characters: []
 };
@@ -21,7 +21,7 @@ export const charactersReducer = (state, action) => {
         case "PREVIOUS_PAGE":
             return { ...state, page: state.page - 1 };
         case "LOADING":
-            return { ...state, loading: true };
+            return { ...state, loading: false };
         case "ERROR":
             return { ...state, error: action.payload };
         case "GET_CHARACTERS":

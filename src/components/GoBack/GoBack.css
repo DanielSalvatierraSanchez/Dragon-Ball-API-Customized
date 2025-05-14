@@ -1,0 +1,15 @@
+.link-back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    gap: 10px;
+    text-shadow: var(--db-shadow-two);
+    background-color: transparent;
+    font-size: x-large;
+}
+/* 
+.link-back img {
+    width: 30px;
+    height: 30px;
+} */
