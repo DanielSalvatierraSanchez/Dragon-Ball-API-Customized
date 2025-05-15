@@ -1,40 +1,25 @@
+import PaginationButton from "../PaginationButton/PaginationButton";
 import "./Pagination.css";
 import React from "react";
 
 const Pagination = ({ page, lastPage, dispatch }) => {
     return (
         <div className='pagination'>
-            <button className='first-page' disabled={page === 1} onClick={() => dispatch({ type: "GO_TO_FIRST_PAGE" })}>
-                {"<<"} Primera página
-            </button>
-            <button
-                className='btn-previous'
+            <PaginationButton
+                className='first-page'
                 disabled={page === 1}
-                onClick={() => {
-                    dispatch({ type: "PREVIOUS_PAGE" });
-                }}
-            >
-                {"<"} Anterior
-            </button>
+                fnc={() => dispatch({ type: "GO_TO_FIRST_PAGE" })}
+                text='<< Primera página'
+            />
+            <PaginationButton className='btn-previous' disabled={page === 1} fnc={() => dispatch({ type: "PREVIOUS_PAGE" })} text='< Anterior' />
             <p className='page-number'>{page}</p>
-            <button
-                className='btn-next'
-                disabled={page === lastPage}
-                onClick={() => {
-                    dispatch({ type: "NEXT_PAGE" });
-                }}
-            >
-                Siguiente {">"}
-            </button>
-            <button
+            <PaginationButton className='btn-next' disabled={page === lastPage} fnc={() => dispatch({ type: "NEXT_PAGE" })} text='Siguiente >' />
+            <PaginationButton
                 className='last-page'
                 disabled={page === lastPage}
-                onClick={() => {
-                    dispatch({ type: "GO_TO_LAST_PAGE" });
-                }}
-            >
-                Ultima página {">>"}
-            </button>
+                fnc={() => dispatch({ type: "GO_TO_LAST_PAGE" })}
+                text='Ultima página >>'
+            />
         </div>
     );
 };
