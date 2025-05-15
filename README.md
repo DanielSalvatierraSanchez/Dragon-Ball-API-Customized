@@ -26,4 +26,4 @@ EXTRAS =>
 CONTINUAR =>
 
 -   revisar codigo de las cartas por si puedo hacer un custom hook para reutilizarlo
--   repasar loading tru o false de reducers
+-   repasar loading true o false de reducers

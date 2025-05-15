@@ -2,7 +2,7 @@ import "./Characters.css";
 import React, { useEffect, useReducer } from "react";
 import Loader from "../../components/Loader/Loader";
 import Pagination from "../../components/Pagination/Pagination";
-import { charactersReducer, INITIAL_STATE_CHARACTERS } from "../../hooks/ReducerCharacters";
+import { charactersReducer, INITIAL_STATE_CHARACTERS } from "../../utils/ReducerCharacters";
 import CharactersCard from "../../components/Cards/CharactersCard/CharactersCard";
 import { fetchApiCharacters } from "../../api/FetchApiCharacters";
 

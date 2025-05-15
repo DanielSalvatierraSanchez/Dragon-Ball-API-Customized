@@ -25,7 +25,7 @@
 
 @media (width >= 768px) {
     .character-card {
-        gap: 10px;
+        gap: 0px;
     }
 
     .character-card img:hover {

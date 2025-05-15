@@ -3,10 +3,12 @@ import React from "react";
 
 const GoBack = ({ src, text, character }) => {
     return (
-        <div className='link-back'>
-            <img src={src} />
-            {text} {character}
-        </div>
+        <>
+            <p className='link-back'>
+                <img className='link-back-image' src={src} />
+                {text} {character}
+            </p>
+        </>
     );
 };
 

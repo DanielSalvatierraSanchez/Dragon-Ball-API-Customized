@@ -4,7 +4,7 @@ import React, { useEffect, useReducer } from "react";
 import { Link, useParams } from "react-router-dom";
 import TransformationsCard from "../../components/Cards/TransformationsCard/TransformationsCard";
 import { fetchApiCharacterById } from "../../api/FetchApiCharacterById";
-import { characterByIdReducer, INITIAL_STATE_CHARACTER_BY_ID } from "../../hooks/ReducerCharacterById";
+import { characterByIdReducer, INITIAL_STATE_CHARACTER_BY_ID } from "../../utils/ReducerCharacterById";
 import GoBack from "../../components/GoBack/GoBack";
 
 const Transformations = () => {

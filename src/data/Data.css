@@ -5,10 +5,17 @@
 }
 
 .data a {
-    padding: 5px 20px;
+    padding: 0px 20px;
 }
 
 .data img {
     width: 20px;
     height: 20px;
+}
+
+@media (width >= 800px) {
+    .data img {
+        width: 25px;
+        height: 25px;
+    }
 }

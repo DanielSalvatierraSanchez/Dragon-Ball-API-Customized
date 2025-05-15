@@ -11,12 +11,12 @@ main {
     padding-top: 50px;
 }
 
-@media (width >= 652px) {
+@media (width >= 632px) {
     .home-container,
     .characters-container,
     .character-container,
     .transformations-container,
     .notFound-container {
-        min-height: 87svh;
+        min-height: 85svh;
     }
 }
