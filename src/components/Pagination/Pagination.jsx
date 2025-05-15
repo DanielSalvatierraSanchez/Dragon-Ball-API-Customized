@@ -4,7 +4,7 @@ import React from "react";
 const Pagination = ({ page, lastPage, dispatch }) => {
     return (
         <div className='pagination'>
-            <button className='first-page' disabled={page === 1} onClick={() => dispatch({ type: "FIRST_PAGE" })}>
+            <button className='first-page' disabled={page === 1} onClick={() => dispatch({ type: "GO_TO_FIRST_PAGE" })}>
                 {"<<"} Primera página
             </button>
             <button

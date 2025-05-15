@@ -21,9 +21,7 @@ Refactorizar en el proyecto anterior =>
 EXTRAS =>
 
 -   activar audio de la pages/home.jsx y si cambio el audio y lo pongo completo mucho mejor!!!
--
 
 CONTINUAR =>
 
 -   revisar codigo de las cartas por si puedo hacer un custom hook para reutilizarlo
--   repasar loading true o false de reducers

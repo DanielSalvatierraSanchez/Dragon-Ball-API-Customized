@@ -2,7 +2,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    /* gap: 10px; */
+    position: absolute;
+    gap: 10px;
     text-shadow: var(--db-shadow-two);
     background-color: transparent;
     font-size: x-large;

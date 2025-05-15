@@ -20,8 +20,8 @@ const Transformations = () => {
     return (
         <>
             <div className='transformations-container'>
-                {!loading && <Loader />}
-                <audio className='audio' src='/assets/SuperSaiyan.mp3' autoPlay></audio>
+                {loading && <Loader />}
+                <audio className='audio' src='/assets/SuperSaiyan.mp3' autoPlay loop></audio>
                 {/* <h2 className='transformations-title'>Transformaciones de {character.name}</h2> */}
                 {transformations.map((evo) => (
                     <TransformationsCard evo={evo} />

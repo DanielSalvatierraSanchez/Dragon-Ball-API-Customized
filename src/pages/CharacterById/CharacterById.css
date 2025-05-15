@@ -12,6 +12,15 @@
     text-shadow: var(--db-shadow-two);
 }
 
+.character-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+}
+
 .link-transformations {
     padding-top: 20px;
     font-size: x-large;
