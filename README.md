@@ -24,4 +24,5 @@ EXTRAS =>
 
 CONTINUAR =>
 
+-   crear formulario
 -   revisar codigo de las cartas por si puedo hacer un custom hook para reutilizarlo
