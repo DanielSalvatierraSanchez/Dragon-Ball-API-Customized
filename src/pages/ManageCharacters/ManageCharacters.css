@@ -1,0 +1,53 @@
+.manage_characters-container {
+    background-position: center;
+    background-image: url("/assets/radar.webp");
+    background-size: auto 100%;
+}
+
+.manage_characters-container h1 {
+    text-shadow: 1px 2px var(--db-color-b);
+    cursor: default;
+}
+
+.manage_characters-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 20px;
+    filter: none;
+}
+
+.manage_characters-container input {
+    height: 25px;
+    color: #000;
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.name-container,
+.ki-container,
+.kiMax-container,
+.image-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+    width: 100%;
+    gap: 5px;
+    text-shadow: 1px 1px var(--db-color-b);
+}
+
+.manage_characters-container button {
+    width: 150px;
+    height: 40px;
+    border-radius: 10px;
+    border: 3px solid var(--db-color-two);
+    text-shadow: 1px 1px var(--db-color-b);
+}
+
+@media (width >= 652px) {
+    .manage_characters-container {
+        background-size: 100%;
+    }
+}

@@ -26,6 +26,8 @@ export const charactersReducer = (state, action) => {
             return { ...state, error: action.payload };
         case "GET_CHARACTERS":
             return { ...state, loading: false, characters: [...action.payload] };
+        case "ADD_CHARACTER":
+            return { ...state, characters: [...state.characters, action.payload] };
         default:
             return state;
     }

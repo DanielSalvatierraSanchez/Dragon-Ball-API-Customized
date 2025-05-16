@@ -24,5 +24,5 @@ EXTRAS =>
 
 CONTINUAR =>
 
--   crear formulario
+-   crear formulario, agregando id aleatorio
 -   revisar codigo de las cartas por si puedo hacer un custom hook para reutilizarlo

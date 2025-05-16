@@ -17,6 +17,11 @@ const Header = () => {
                             Personajes
                         </NavLink>
                     </li>
+                    <li>
+                        <NavLink to='/manage_characters' activeclassname='active'>
+                            Gestion
+                        </NavLink>
+                    </li>
                 </ul>
             </nav>
         </header>
