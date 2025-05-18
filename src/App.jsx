@@ -9,6 +9,7 @@ import NotFound from "./pages/404/404";
 import Transformations from "./pages/Transformations/Transformations";
 import Footer from "./components/Footer/Footer";
 import ManageCharacters from "./pages/ManageCharacters/ManageCharacters";
+import NewCharacters from "./components/Cards/NewCharactersCard/NewCharactersCard";
 
 const App = () => {
     return (
@@ -19,6 +20,7 @@ const App = () => {
                 <Route path='/characters' element={<Characters />} />
                 <Route path='/characters/:id' element={<CharacterById />} />
                 <Route path='/characters/:id/transformations' element={<Transformations />} />
+                <Route path='/new_characters' element={<NewCharacters />} />
                 <Route path='/manage_characters' element={<ManageCharacters />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>

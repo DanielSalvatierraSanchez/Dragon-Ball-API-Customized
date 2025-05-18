@@ -1,6 +1,6 @@
 import { useCharacters } from "../../utils/Context";
 import "./ManageCharacters.css";
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 
 const ManageCharacters = () => {
     const { dispatch } = useCharacters();
@@ -10,7 +10,7 @@ const ManageCharacters = () => {
     const inputKiMax = useRef();
     const inputImage = useRef();
 
-    // const [form, setForm] = useState({ inputName: "", inputKi: "", inputKiMax: "", inputImage: "" });
+    const [form, setForm] = useState({});
 
     // const handleChange = () => {
     //     // setForm({
@@ -26,19 +26,20 @@ const ManageCharacters = () => {
             id: crypto.randomUUID(),
             name: inputName.current.value,
             ki: inputKi.current.value,
-            kiMax: inputKiMax.current.value,
-            image: inputImage.current.files[0].name
+            // kiMax: inputKiMax.current.value,
+            // image: inputImage.current.files[0].name
             // URL.createObjectURL(inputImage.current.files[0])
         };
 
         dispatch({ type: "ADD_CHARACTER", payload: newCharacter });
 
-        // setForm({ inputName: "", inputKi: "", inputKiMax: "", inputImage: "" });
-        // Limpiar los campos del formulario
-        // inputName.current.value = "";
-        // inputKi.current.value = "";
-        // inputKiMax.current.value = "";
-        // inputImage.current.files[0].name = "";
+        setForm({
+            ...form,
+            inputName: (inputName.current.value = ""),
+            inputKi: (inputKi.current.value = ""),
+            inputKiMax: (inputKiMax.current.value = ""),
+            inputImage: (inputImage.current.value = "")
+        });
     };
 
     return (
@@ -47,7 +48,7 @@ const ManageCharacters = () => {
             <form className='manageCharacters-form' onSubmit={submit}>
                 <div className='nameCharacter-container'>
                     <label htmlFor='name'>Nombre</label>
-                    <input ref={inputName} type='string' required='true' placeholder='Introduce el nombre'></input>
+                    <input ref={inputName} type='string' onChange={setForm} required='true' placeholder='Introduce el nombre'></input>
                 </div>
                 <div className='kiCharacter-container'>
                     <label htmlFor='ki'>Ki</label>
@@ -55,11 +56,11 @@ const ManageCharacters = () => {
                 </div>
                 <div className='kiMaxCharacter-container'>
                     <label htmlFor='kiMax'>Ki maximo</label>
-                    <input ref={inputKiMax} type='number' required='true' placeholder='Introduce el ki max'></input>
+                    <input ref={inputKiMax} type='number' placeholder='Introduce el ki max'></input>
                 </div>
                 <div className='imageCharacter-container'>
                     <label htmlFor='image'>Imagen</label>
-                    <input ref={inputImage} type='file' required='true' placeholder='Sube una imagen'></input>
+                    <input ref={inputImage} type='file' placeholder='Sube una imagen'></input>
                 </div>
                 <button className='agreeCharacter'>+ Agregar personaje</button>
             </form>

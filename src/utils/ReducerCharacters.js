@@ -5,7 +5,8 @@ export const INITIAL_STATE_CHARACTERS = {
     limit: 10,
     loading: false,
     error: null,
-    characters: []
+    characters: [],
+    newCharacters: []
 };
 
 export const charactersReducer = (state, action) => {
@@ -27,7 +28,7 @@ export const charactersReducer = (state, action) => {
         case "GET_CHARACTERS":
             return { ...state, loading: false, characters: [...action.payload] };
         case "ADD_CHARACTER":
-            return { ...state, characters: [...state.characters, action.payload] };
+            return { ...state, characters: [...state.characters, action.payload], newCharacters: [...state.newCharacters, action.payload] };
         default:
             return state;
     }

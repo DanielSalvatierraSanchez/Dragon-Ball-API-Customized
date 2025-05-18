@@ -12,6 +12,8 @@
     --db-color-four: #f75a5a;
     --db-color-b: #000;
     --db-color-w: #fff;
+    --db-text-shadow-one: 1px 2px var(--db-color-b);
+    --db-text-shadow-two: 2px 2px var(--db-color-b);
     --db-shadow-one: 0 0 20px var(--db-color-b), 0 0 30px var(--db-color-two), 0 0 40px var(--db-color-two), 0 0 50px var(--db-color-two),
         0 0 60px var(--db-color-two), 0 0 70px var(--db-color-two), 0 0 80px var(--db-color-two);
     --db-shadow-two: 0 0 10px var(--db-color-b);

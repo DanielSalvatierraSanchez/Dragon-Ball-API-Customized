@@ -18,6 +18,11 @@ const Header = () => {
                         </NavLink>
                     </li>
                     <li>
+                        <NavLink to='/new_characters' activeclassname='active'>
+                            Nuevos Personajes
+                        </NavLink>
+                    </li>
+                    <li>
                         <NavLink to='/manage_characters' activeclassname='active'>
                             Gestion
                         </NavLink>

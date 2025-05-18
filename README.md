@@ -24,7 +24,6 @@ EXTRAS =>
 
 CONTINUAR =>
 
--   crear formulario, agregando id aleatorio
+-   añadir los nuevos en el array de la page normal y en el de la page de nuevos
 -   revisar codigo de las cartas por si puedo hacer un custom hook para reutilizarlo
 -   maquetar page 404 game over o algo asi...goku muerto...
--   index.css crear root para tipos se text-shadow y shadows

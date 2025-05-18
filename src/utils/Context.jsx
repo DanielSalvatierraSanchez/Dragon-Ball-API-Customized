@@ -13,10 +13,9 @@ const CharactersProvider = ({ children }) => {
     const [state, dispatch] = useReducer(charactersReducer, INITIAL_STATE_CHARACTERS);
     const { page, limit, characters } = state;
     console.log(characters, "CHARACTERS DEL CONTEXT");
-    
 
     useEffect(() => {
-        fetchApiCharacters(dispatch, page, limit);
+        fetchApiCharacters(dispatch, 1, 100);
     }, [page, limit]);
 
     return <CharactersContext.Provider value={{ state, dispatch }}>{children}</CharactersContext.Provider>;
