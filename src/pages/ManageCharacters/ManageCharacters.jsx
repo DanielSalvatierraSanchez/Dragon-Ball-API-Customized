@@ -25,7 +25,7 @@ const ManageCharacters = () => {
         const newCharacter = {
             id: crypto.randomUUID(),
             name: inputName.current.value,
-            ki: inputKi.current.value,
+            ki: inputKi.current.value
             // kiMax: inputKiMax.current.value,
             // image: inputImage.current.files[0].name
             // URL.createObjectURL(inputImage.current.files[0])
@@ -52,7 +52,7 @@ const ManageCharacters = () => {
                 </div>
                 <div className='kiCharacter-container'>
                     <label htmlFor='ki'>Ki</label>
-                    <input ref={inputKi} type='number' required='true' placeholder='Introduce el ki'></input>
+                    <input ref={inputKi} type='number' onChange={setForm} required='true' placeholder='Introduce el ki'></input>
                 </div>
                 <div className='kiMaxCharacter-container'>
                     <label htmlFor='kiMax'>Ki maximo</label>

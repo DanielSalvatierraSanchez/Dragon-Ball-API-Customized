@@ -24,6 +24,6 @@ EXTRAS =>
 
 CONTINUAR =>
 
--   añadir los nuevos en el array de la page normal y en el de la page de nuevos
+-   añadir los nuevos en el array de la page normal
 -   revisar codigo de las cartas por si puedo hacer un custom hook para reutilizarlo
 -   maquetar page 404 game over o algo asi...goku muerto...

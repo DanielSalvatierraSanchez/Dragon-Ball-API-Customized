@@ -7,7 +7,7 @@ main {
 .character-container,
 .transformations-container,
 .manageCharacters-container,
-.newCharacter-container,
+.newCharacters-container,
 .notFound-container {
     min-height: 82svh;
     padding-top: 50px;
@@ -19,7 +19,7 @@ main {
     .character-container,
     .transformations-container,
     .manageCharacters-container,
-    .newCharacter-container,
+    .newCharacters-container,
     .notFound-container {
         min-height: 85svh;
     }
