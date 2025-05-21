@@ -1,9 +1,9 @@
-import { useCharacters } from "../../utils/Context";
 import "./ManageCharacters.css";
 import React, { useRef, useState } from "react";
+import { useCharactersContext } from "../../hooks/useCharactersContext";
 
 const ManageCharacters = () => {
-    const { dispatch } = useCharacters();
+    const { dispatch } = useCharactersContext();
 
     const inputName = useRef();
     const inputKi = useRef();
@@ -12,13 +12,6 @@ const ManageCharacters = () => {
 
     const [form, setForm] = useState({});
 
-    // const handleChange = () => {
-    //     // setForm({
-    //     //     ...form,
-    //     //     [e.target.inputName]: e.target.value
-    //     //     //  [e.target.inputKi]: e.target.value, [e.target.inputKiMax]: e.target.value, [e.target.inputImage]: e.target.value
-    //     // });
-    // };
     const submit = (e) => {
         e.preventDefault();
 
@@ -48,11 +41,11 @@ const ManageCharacters = () => {
             <form className='manageCharacters-form' onSubmit={submit}>
                 <div className='nameCharacter-container'>
                     <label htmlFor='name'>Nombre</label>
-                    <input ref={inputName} type='string' onChange={setForm} required='true' placeholder='Introduce el nombre'></input>
+                    <input ref={inputName} type='string' onChange={setForm} required={true} placeholder='Introduce el nombre'></input>
                 </div>
                 <div className='kiCharacter-container'>
                     <label htmlFor='ki'>Ki</label>
-                    <input ref={inputKi} type='number' onChange={setForm} required='true' placeholder='Introduce el ki'></input>
+                    <input ref={inputKi} type='number' onChange={setForm} required={true} placeholder='Introduce el ki'></input>
                 </div>
                 <div className='kiMaxCharacter-container'>
                     <label htmlFor='kiMax'>Ki maximo</label>
@@ -62,7 +55,9 @@ const ManageCharacters = () => {
                     <label htmlFor='image'>Imagen</label>
                     <input ref={inputImage} type='file' placeholder='Sube una imagen'></input>
                 </div>
-                <button className='agreeCharacter'>+ Agregar personaje</button>
+                <button className='agreeCharacter' type='submit'>
+                    + Agregar personaje
+                </button>
             </form>
         </div>
     );

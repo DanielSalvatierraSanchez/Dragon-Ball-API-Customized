@@ -14,6 +14,8 @@ const Characters = () => {
         fetchApiCharacters(dispatch, page, limit);
     }, [page, limit]);
 
+    
+
     return (
         <div className='characters-container'>
             {loading && <Loader />}

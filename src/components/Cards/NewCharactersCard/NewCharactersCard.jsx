@@ -7,7 +7,7 @@ const NewCharactersCard = ({ newCharacter }) => {
             <h1>{newCharacter.name}</h1>
             <p>{newCharacter.ki}</p>
             {/* <p>{newCharacter.kiMax}</p> */}
-            <img className='newCharacter-image-card' src={newCharacter.image} alt={newCharacter.name}></img>
+            <img className='newCharacters-image-card' src={newCharacter.image} alt={newCharacter.name}></img>
         </div>
     );
 };

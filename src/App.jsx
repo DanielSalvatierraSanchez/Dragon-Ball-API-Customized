@@ -9,7 +9,7 @@ import NotFound from "./pages/404/404";
 import Transformations from "./pages/Transformations/Transformations";
 import Footer from "./components/Footer/Footer";
 import ManageCharacters from "./pages/ManageCharacters/ManageCharacters";
-import NewCharacters from "./pages/ManageCharacters/NewCharacters/NewCharacters";
+import NewCharacters from "./pages/NewCharacters/NewCharacters";
 
 const App = () => {
     return (
