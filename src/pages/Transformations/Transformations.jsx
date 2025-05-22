@@ -1,28 +1,22 @@
 import "./Transformations.css";
 import Loader from "../../components/Loader/Loader";
-import React, { useEffect, useReducer } from "react";
+import React from "react";
 import { Link, useParams } from "react-router-dom";
 import TransformationsCard from "../../components/Cards/TransformationsCard/TransformationsCard";
-import { fetchApiCharacterById } from "../../api/FetchApiCharacterById";
-import { characterByIdReducer, INITIAL_STATE_CHARACTER_BY_ID } from "../../utils/ReducerCharacterById";
 import GoBack from "../../components/GoBack/GoBack";
+import { useCharacterByIdContext } from "../../context/useCharacterByIdContext";
 
 const Transformations = () => {
     const { id } = useParams();
-    const [state, dispatch] = useReducer(characterByIdReducer, INITIAL_STATE_CHARACTER_BY_ID);
-    const { loading, transformations, character } = state;
-
-    useEffect(() => {
-        fetchApiCharacterById(dispatch, id);
-    }, [id]);
+    const { state } = useCharacterByIdContext();
+    const { transformations, character } = state;
 
     if (!transformations) return <Loader />;
+
     return (
         <>
             <div className='transformations-container'>
-                {loading && <Loader />}
                 <audio className='audio' src='/assets/SuperSaiyan.mp3' autoPlay loop></audio>
-                {/* <h2 className='transformations-title'>Transformaciones de {character.name}</h2> */}
                 {transformations.map((evo) => (
                     <TransformationsCard evo={evo} />
                 ))}

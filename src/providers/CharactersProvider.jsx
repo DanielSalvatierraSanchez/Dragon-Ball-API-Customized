@@ -2,14 +2,14 @@ import { charactersReducer, INITIAL_STATE_CHARACTERS } from "../utils/ReducerCha
 import { useEffect } from "react";
 import { fetchApiCharacters } from "../api/FetchApiCharacters";
 import { useReducer } from "react";
-import { CharactersContext } from "../hooks/useCharactersContext";
+import { CharactersContext } from "../context/useCharactersContext";
 
 const CharactersProvider = ({ children }) => {
     const [state, dispatch] = useReducer(charactersReducer, INITIAL_STATE_CHARACTERS);
     const { page, limit } = state;
 
     useEffect(() => {
-        fetchApiCharacters(dispatch, 1, 100);
+        fetchApiCharacters(dispatch, 1, 10);
     }, [page, limit]);
 
     return <CharactersContext.Provider value={{ state, dispatch }}>{children}</CharactersContext.Provider>;

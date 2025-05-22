@@ -1,6 +1,6 @@
 import "./ManageCharacters.css";
 import React, { useRef, useState } from "react";
-import { useCharactersContext } from "../../hooks/useCharactersContext";
+import { useCharactersContext } from "../../context/useCharactersContext";
 
 const ManageCharacters = () => {
     const { dispatch } = useCharactersContext();

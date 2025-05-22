@@ -1,6 +1,6 @@
 import NewCharactersCard from "../../components/Cards/NewCharactersCard/NewCharactersCard";
 import Loader from "../../components/Loader/Loader";
-import { useCharactersContext } from "../../hooks/useCharactersContext";
+import { useCharactersContext } from "../../context/useCharactersContext";
 import "./NewCharacters.css";
 import React from "react";
 
@@ -9,6 +9,7 @@ const NewCharacters = () => {
     const newCharacters = state.newCharacters;
 
     if (!newCharacters) return <Loader />;
+
     return (
         <div className='newCharacters-container'>
             {newCharacters.map((newCharacter) => (

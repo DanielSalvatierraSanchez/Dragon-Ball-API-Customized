@@ -10,6 +10,7 @@ import Transformations from "./pages/Transformations/Transformations";
 import Footer from "./components/Footer/Footer";
 import ManageCharacters from "./pages/ManageCharacters/ManageCharacters";
 import NewCharacters from "./pages/NewCharacters/NewCharacters";
+import CharacterByIdProvider from "./providers/CharacterbyidProvider";
 
 const App = () => {
     return (
@@ -18,8 +19,22 @@ const App = () => {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/characters' element={<Characters />} />
-                <Route path='/characters/:id' element={<CharacterById />} />
-                <Route path='/characters/:id/transformations' element={<Transformations />} />
+                <Route
+                    path='/characters/:id'
+                    element={
+                        <CharacterByIdProvider>
+                            <CharacterById />
+                        </CharacterByIdProvider>
+                    }
+                />
+                <Route
+                    path='/characters/:id/transformations'
+                    element={
+                        <CharacterByIdProvider>
+                            <Transformations />
+                        </CharacterByIdProvider>
+                    }
+                />
                 <Route path='/new_characters' element={<NewCharacters />} />
                 <Route path='/manage_characters' element={<ManageCharacters />} />
                 <Route path='*' element={<NotFound />} />
