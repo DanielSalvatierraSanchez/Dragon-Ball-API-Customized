@@ -1,13 +1,24 @@
 .notFound-container {
-    background-color: var(--db-color-b);
-    color: var(--db-color-w);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 50px;
+    background-color: var(--db-color-b);
+    font-size: xx-large;
 }
 
-.notFound-container a {
-    color: var(--db-color-w);
+.notFound-container h1 {
+    max-width: 200px;
+}
+
+.notFound-container h3 {
+    text-shadow: var(--db-text-shadow-two);
+    animation: parpadeo 1s infinite;
+}
+
+@media (width >= 500px) {
+    .notFound-container h1 {
+        max-width: 400px;
+    }
 }

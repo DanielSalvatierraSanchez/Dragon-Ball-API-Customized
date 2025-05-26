@@ -5,7 +5,7 @@
     width: 100px;
     height: 100px;
     margin: auto;
-    margin-top: 200px;
+    /* margin-top: 200px; */
     animation: ball 1s infinite steps(100);
 }
 

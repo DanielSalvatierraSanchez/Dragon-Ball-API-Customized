@@ -8,7 +8,13 @@ const NewCharacters = () => {
     const { state } = useCharactersContext();
     const newCharacters = state.newCharacters;
 
-    if (!newCharacters) return <Loader />;
+    if (newCharacters.length === 0)
+        return (
+            // <Loader />
+            <>
+                <h1 className='newCharacters-empty'>No hay personajes nuevos</h1>
+            </>
+        );
 
     return (
         <div className='newCharacters-container'>
