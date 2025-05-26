@@ -25,6 +25,4 @@ EXTRAS =>
 CONTINUAR =>
 
 -   CHARACTERS revisar paginacion
--   ManageCharacter dejar todo el form habilitado son restricciones y probarlo (image)
 -   revisar codigo de las cartas por si puedo hacer un custom hook para reutilizarlo
--   maquetar page 404 game over o algo asi...goku muerto...

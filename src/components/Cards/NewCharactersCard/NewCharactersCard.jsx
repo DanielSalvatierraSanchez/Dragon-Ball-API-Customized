@@ -5,9 +5,9 @@ const NewCharactersCard = ({ newCharacter }) => {
     return (
         <div key={newCharacter.id} className='newCharacters-card'>
             <h1>{newCharacter.name}</h1>
-            <p>{newCharacter.ki}</p>
-            {/* <p>{newCharacter.kiMax}</p> */}
             <img className='newCharacters-image-card' src={newCharacter.image} alt={newCharacter.name}></img>
+            {/* <p>Ki: {newCharacter.ki}</p> */}
+            {/* <p>Ki Max: {newCharacter.kiMax}</p> */}
         </div>
     );
 };

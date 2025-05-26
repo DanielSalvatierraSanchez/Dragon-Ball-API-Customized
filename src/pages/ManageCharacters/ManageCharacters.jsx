@@ -6,8 +6,8 @@ const ManageCharacters = () => {
     const { dispatch } = useCharactersContext();
 
     const inputName = useRef();
-    const inputKi = useRef();
-    const inputKiMax = useRef();
+    // const inputKi = useRef();
+    // const inputKiMax = useRef();
     const inputImage = useRef();
 
     const [form, setForm] = useState({});
@@ -18,10 +18,9 @@ const ManageCharacters = () => {
         const newCharacter = {
             id: crypto.randomUUID(),
             name: inputName.current.value,
-            ki: inputKi.current.value
+            // ki: inputKi.current.value,
             // kiMax: inputKiMax.current.value,
-            // image: inputImage.current.files[0].name
-            // URL.createObjectURL(inputImage.current.files[0])
+            image: URL.createObjectURL(inputImage.current.files[0])
         };
 
         dispatch({ type: "ADD_CHARACTER", payload: newCharacter });
@@ -29,8 +28,8 @@ const ManageCharacters = () => {
         setForm({
             ...form,
             inputName: (inputName.current.value = ""),
-            inputKi: (inputKi.current.value = ""),
-            inputKiMax: (inputKiMax.current.value = ""),
+            // inputKi: (inputKi.current.value = ""),
+            // inputKiMax: (inputKiMax.current.value = ""),
             inputImage: (inputImage.current.value = "")
         });
     };
@@ -43,17 +42,17 @@ const ManageCharacters = () => {
                     <label htmlFor='name'>Nombre</label>
                     <input ref={inputName} type='string' onChange={setForm} required={true} placeholder='Introduce el nombre'></input>
                 </div>
-                <div className='kiCharacter-container'>
+                {/* <div className='kiCharacter-container'>
                     <label htmlFor='ki'>Ki</label>
                     <input ref={inputKi} type='number' onChange={setForm} required={true} placeholder='Introduce el ki'></input>
-                </div>
-                <div className='kiMaxCharacter-container'>
+                </div> */}
+                {/* <div className='kiMaxCharacter-container'>
                     <label htmlFor='kiMax'>Ki maximo</label>
                     <input ref={inputKiMax} type='number' placeholder='Introduce el ki max'></input>
-                </div>
+                </div> */}
                 <div className='imageCharacter-container'>
                     <label htmlFor='image'>Imagen</label>
-                    <input ref={inputImage} type='file' placeholder='Sube una imagen'></input>
+                    <input ref={inputImage} type='file' name='character_image' required={true} placeholder='Sube una imagen'></input>
                 </div>
                 <button className='agreeCharacter' type='submit'>
                     + Agregar personaje
