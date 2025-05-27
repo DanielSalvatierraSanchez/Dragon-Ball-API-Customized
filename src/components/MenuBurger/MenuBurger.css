@@ -1,0 +1,32 @@
+.menuBurguer-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* height: 8svh; */
+}
+
+.menuBurger-button {
+    background-color: transparent;
+    border: none;
+    transition: all 0.5s;
+}
+
+.menuBurger-button:hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.menuBurger-button img {
+    height: 8svh;
+}
+
+.menuBurger-button:focus {
+    transform: scale(1.2);
+}
+
+@media (width >= 768px) {
+    /* .menuBurguer-container {
+        height: 120svh;
+    } */
+}

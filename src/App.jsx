@@ -11,10 +11,12 @@ import Footer from "./components/Footer/Footer";
 import ManageCharacters from "./pages/ManageCharacters/ManageCharacters";
 import NewCharacters from "./pages/NewCharacters/NewCharacters";
 import CharacterByIdProvider from "./providers/CharacterbyidProvider";
+import MenuBurger from "./components/MenuBurger/MenuBurger";
 
 const App = () => {
     return (
         <div>
+            <MenuBurger />
             <Header />
             <Routes>
                 <Route path='/' element={<Home />} />

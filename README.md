@@ -24,5 +24,6 @@ EXTRAS =>
 
 CONTINUAR =>
 
+-   continuar menu burger
 -   CHARACTERS revisar paginacion
 -   revisar codigo de las cartas por si puedo hacer un custom hook para reutilizarlo
