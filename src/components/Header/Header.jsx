@@ -1,34 +1,17 @@
 import "./Header.css";
-import { NavLink } from "react-router-dom";
 import React from "react";
+import Nav from "../Nav/Nav";
+import MenuBurger from "../MenuBurger/MenuBurger";
 
 const Header = () => {
     return (
         <header>
-            <nav>
-                <ul>
-                    <li>
-                        <NavLink to='/' activeclassname='active'>
-                            Home
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to='/characters' activeclassname='active'>
-                            Personajes
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to='/new_characters' activeclassname='active'>
-                            Nuevos Personajes
-                        </NavLink>
-                    </li>
-                    <li>
-                        <NavLink to='/manage_characters' activeclassname='active'>
-                            Crear Personajes
-                        </NavLink>
-                    </li>
-                </ul>
-            </nav>
+            <section className='desktop-header'>
+                <Nav />
+            </section>
+            <section className='mobile-header'>
+                <MenuBurger />
+            </section>
         </header>
     );
 };

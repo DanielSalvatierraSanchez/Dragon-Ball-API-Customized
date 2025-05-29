@@ -1,9 +1,9 @@
-.menuBurguer-container {
-    display: flex;
+.menuBurger-container {
+    display: inline-block;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100%;
-    /* height: 8svh; */
 }
 
 .menuBurger-button {
@@ -26,7 +26,7 @@
 }
 
 @media (width >= 768px) {
-    /* .menuBurguer-container {
-        height: 120svh;
-    } */
+    .menuBurger-button {
+        display: none;
+    }
 }
