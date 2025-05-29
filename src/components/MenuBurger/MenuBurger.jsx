@@ -7,6 +7,7 @@ const MenuBurger = () => {
 
     const toggleMenu = () => {
         setMenuIsOpen(!menuIsOpen);
+        document.body.style.overflow = menuIsOpen ? "auto" : "hidden";
     };
     const closeMenu = () => {
         setMenuIsOpen(menuIsOpen);
