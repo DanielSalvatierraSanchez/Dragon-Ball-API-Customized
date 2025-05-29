@@ -9,7 +9,7 @@ const CharactersProvider = ({ children }) => {
     const { page, limit } = state;
 
     useEffect(() => {
-        fetchApiCharacters(dispatch, 1, 10);
+        fetchApiCharacters(dispatch, page, limit);
     }, [page, limit]);
 
     return <CharactersContext.Provider value={{ state, dispatch }}>{children}</CharactersContext.Provider>;
