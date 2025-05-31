@@ -1,13 +1,13 @@
 .home-container {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
+    padding: 30px;
     background-image: url("/assets/dbhouse.webp");
     background-size: auto 100%;
     background-position: center;
     font-size: x-large;
-    padding: 50px 30px 0px 30px;
     text-shadow: var(--db-shadow-two);
     cursor: default;
 }
@@ -44,6 +44,6 @@ h2 {
 
 @media (width >= 1280px) {
     .home-container {
-        background-size: 100%;
+        background-size: 110%;
     }
 }

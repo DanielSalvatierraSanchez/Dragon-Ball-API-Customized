@@ -4,11 +4,20 @@
     justify-content: center;
     align-items: center;
     flex-wrap: wrap;
-    padding: 30px;
-    gap: 50px;
     background-image: url("/assets/planet.webp");
     background-size: auto 100%;
     background-position: center;
+}
+
+.characters-card-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    gap: 50px;
+    max-width: 900px;
 }
 
 @media (width >= 768px) {
@@ -17,7 +26,13 @@
     }
 }
 
-@media (width >= 1100px) {
+@media (width >= 1024px) {
+    .characters-card-container {
+        max-width: 1200px;
+    }
+}
+
+@media (width >= 1210px) {
     .characters-container {
         background-size: 100%;
     }

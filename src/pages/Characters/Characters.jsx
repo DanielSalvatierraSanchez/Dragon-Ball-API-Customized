@@ -13,10 +13,12 @@ const Characters = () => {
 
     return (
         <div className='characters-container'>
-            {characters.map((character) => (
-                <CharactersCard key={character.id} character={character} />
-            ))}
-            <Pagination page={page} lastPage={lastPage} dispatch={dispatch} />
+            <section className='characters-card-container'>
+                {characters.map((character) => (
+                    <CharactersCard key={character.id} character={character} />
+                ))}
+                <Pagination page={page} lastPage={lastPage} dispatch={dispatch} />
+            </section>
         </div>
     );
 };

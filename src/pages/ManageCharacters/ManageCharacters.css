@@ -51,6 +51,7 @@
     font-size: large;
     border-radius: 10px;
 }
+
 .manageCharacters-container input:hover,
 button:hover {
     animation: parpadeo 1s infinite;
@@ -74,7 +75,7 @@ button:hover {
     margin: 30px;
 }
 
-@media (width >= 800px) {
+@media (width >= 830px) {
     .manageCharacters-container {
         background-size: 100%;
     }

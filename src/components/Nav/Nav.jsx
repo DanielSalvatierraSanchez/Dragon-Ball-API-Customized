@@ -2,7 +2,7 @@ import "./Nav.css";
 import { NavLink } from "react-router-dom";
 import React from "react";
 
-const Nav = (closeMenu = { closeMenu }) => {
+const Nav = ({ closeMenu }) => {
     return (
         <nav>
             <ul>
