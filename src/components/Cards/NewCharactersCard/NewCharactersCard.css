@@ -1,10 +1,12 @@
 .newCharacters-card {
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     width: 100px;
     height: 175px;
+    margin: 30px;
     background-color: #ffa95585;
     border-radius: 12px;
     border: 2px solid var(--db-color-two);
@@ -15,12 +17,9 @@
     box-shadow: var(--db-shadow-one);
 }
 
-.newCharacters-card h1 {
-    /* position: relative; */
-    height: 100%;
-    position: relative;
-    /* max-width: 120px;
-    margin-top: 120px; */
+.newCharacters-card p {
+    position: absolute;
+    bottom: 0;
     text-shadow: var(--db-shadow-two);
     cursor: default;
 }
@@ -39,8 +38,8 @@
 }
 
 .newCharacters-card img:hover {
-    transform: scale(1.5);
-    z-index: 999;
+    transform: scale(2);
+    z-index: 9;
 }
 
 @media (width >= 1024px) {
@@ -49,8 +48,9 @@
         height: 200px;
     }
 
-    .newCharacters-card h1 {
-        position: absolute;
-        height: 175px;
+    .newCharacters-card p {
+        max-width: 150px;
+        margin-top: 150px;
+        font-size: xx-large;
     }
 }

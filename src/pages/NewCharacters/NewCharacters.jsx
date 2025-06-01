@@ -1,7 +1,7 @@
-import NewCharactersCard from "../../components/Cards/NewCharactersCard/NewCharactersCard";
-import { useCharactersContext } from "../../context/useCharactersContext";
 import "./NewCharacters.css";
 import React from "react";
+import NewCharactersCard from "../../components/Cards/NewCharactersCard/NewCharactersCard";
+import { useCharactersContext } from "../../context/useCharactersContext";
 
 const NewCharacters = () => {
     const { state } = useCharactersContext();
@@ -18,12 +18,9 @@ const NewCharacters = () => {
 
     return (
         <div className='newCharacters-container'>
-            {newCharacters.map(
-                (newCharacter) => (
-                    console.log("newCharacter map en page crear", newCharacter),
-                    (<NewCharactersCard key={newCharacter.id} newCharacter={newCharacter} />)
-                )
-            )}
+            {newCharacters.map((newCharacter) => (
+                <NewCharactersCard key={newCharacter.id} newCharacter={newCharacter} />
+            ))}
         </div>
     );
 };

@@ -24,5 +24,4 @@ EXTRAS =>
 
 CONTINUAR =>
 
--   matizar css de los nuevos personajes y repasar codigo y los css, backgrounds
 -   revisar codigo de las cartas por si puedo hacer un custom hook para reutilizarlo

@@ -1,6 +1,6 @@
-import Nav from "../Nav/Nav";
 import "./MenuBurger.css";
 import React, { useState } from "react";
+import Nav from "../Nav/Nav";
 
 const MenuBurger = () => {
     const [menuIsOpen, setMenuIsOpen] = useState(false);

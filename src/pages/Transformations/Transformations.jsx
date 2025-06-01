@@ -1,6 +1,6 @@
 import "./Transformations.css";
-import Loader from "../../components/Loader/Loader";
 import React from "react";
+import Loader from "../../components/Loader/Loader";
 import { Link, useParams } from "react-router-dom";
 import TransformationsCard from "../../components/Cards/TransformationsCard/TransformationsCard";
 import GoBack from "../../components/GoBack/GoBack";

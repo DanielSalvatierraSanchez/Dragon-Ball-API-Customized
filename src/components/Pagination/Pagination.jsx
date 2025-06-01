@@ -1,6 +1,6 @@
-import PaginationButton from "../PaginationButton/PaginationButton";
 import "./Pagination.css";
 import React from "react";
+import PaginationButton from "../PaginationButton/PaginationButton";
 
 const Pagination = ({ page, lastPage, dispatch }) => {
     return (

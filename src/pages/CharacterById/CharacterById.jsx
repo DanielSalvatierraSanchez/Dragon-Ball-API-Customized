@@ -1,6 +1,6 @@
 import "./CharacterById.css";
-import { Link } from "react-router-dom";
 import React from "react";
+import { Link } from "react-router-dom";
 import Loader from "../../components/Loader/Loader";
 import CharacterCard from "../../components/Cards/CharacterCard/CharacterCard";
 import GoBack from "../../components/GoBack/GoBack";
