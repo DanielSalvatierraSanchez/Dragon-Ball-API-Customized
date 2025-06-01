@@ -7,22 +7,22 @@ const Nav = ({ closeMenu }) => {
         <nav>
             <ul>
                 <li>
-                    <NavLink to='/' activeclassname='active'>
+                    <NavLink to='/' className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>
                         Home
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/characters' activeclassname='active' onClick={closeMenu}>
+                    <NavLink to='/characters' className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>
                         Personajes
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/new_characters' activeclassname='active' onClick={closeMenu}>
+                    <NavLink to='/new_characters' className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>
                         Nuevos Personajes
                     </NavLink>
                 </li>
                 <li>
-                    <NavLink to='/manage_characters' activeclassname='active' onClick={closeMenu}>
+                    <NavLink to='/manage_characters' className={({ isActive }) => (isActive ? "active" : "")} onClick={closeMenu}>
                         Crear Personajes
                     </NavLink>
                 </li>
