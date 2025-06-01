@@ -13,6 +13,8 @@
 
 .newCharacters-empty {
     text-shadow: var(--db-text-shadow-two);
+    cursor: default;
+    animation: parpadeo 1s infinite;
 }
 
 @media (width >= 1280px) {
