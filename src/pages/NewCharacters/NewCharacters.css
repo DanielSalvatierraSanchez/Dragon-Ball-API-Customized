@@ -30,7 +30,8 @@
 }
 
 @media (width >= 1280px) {
-    .newCharacters-container {
+    .newCharacters-container,
+    .newCharacters-empty {
         background-size: 100%;
     }
 }

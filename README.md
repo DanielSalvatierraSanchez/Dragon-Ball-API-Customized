@@ -18,10 +18,6 @@ Refactorizar en el proyecto anterior =>
 -   El custom hook lo dejo a tu elección, pero intenta que tenga sentido y no esté hecho solo por hacerlo.
 -   Intenta añadirle algo más.
 
-EXTRAS =>
-
--   activar audio de la pages/home.jsx y si cambio el audio y lo pongo completo mucho mejor!!!
-
 CONTINUAR =>
 
 -   revisar codigo de las cartas por si puedo hacer un custom hook para reutilizarlo

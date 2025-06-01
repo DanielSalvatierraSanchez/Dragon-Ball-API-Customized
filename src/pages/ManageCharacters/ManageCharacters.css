@@ -3,7 +3,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("/assets/radar.webp");
+    background-image: url("/assets/world.webp");
     background-size: auto 100%;
     background-position: center;
     font-size: large;
@@ -75,7 +75,7 @@ button:hover {
     margin: 30px;
 }
 
-@media (width >= 830px) {
+@media (width >= 1285px) {
     .manageCharacters-container {
         background-size: 100%;
     }
