@@ -1,33 +1,10 @@
 import "./ManageCharacters.css";
-import React, { useRef } from "react";
-import { useCharactersContext } from "../../context/useCharactersContext";
+import React from "react";
 import FormCreateCharacter from "../../components/FormCreateCharacter/FormCreateCharacter";
+import useFormNewCharacters from "../../hooks/useFormNewCharacters";
 
 const ManageCharacters = () => {
-    const { dispatch } = useCharactersContext();
-    const inputName = useRef();
-    const inputImage = useRef();
-    // const inputKi = useRef();
-    // const inputKiMax = useRef();
-
-    const submit = (e) => {
-        e.preventDefault();
-
-        const newCharacter = {
-            id: crypto.randomUUID(),
-            name: inputName.current.value,
-            image: URL.createObjectURL(inputImage.current.files[0])
-            // ki: inputKi.current.value,
-            // kiMax: inputKiMax.current.value,
-        };
-
-        dispatch({ type: "ADD_CHARACTER", payload: newCharacter });
-
-        inputName.current.value = "";
-        inputImage.current.value = "";
-        // inputKi.current.value = "";
-        // inputKiMax.current.value = "";
-    };
+    const { inputName, inputImage, submit } = useFormNewCharacters();
 
     return (
         <div className='manageCharacters-container'>

@@ -1,24 +1,15 @@
 import "./MenuBurger.css";
-import React, { useState } from "react";
+import React from "react";
 import Nav from "../Nav/Nav";
+import useToggleMenu from "../../hooks/useToggleMenu";
+import Button from "../Button/Button";
 
 const MenuBurger = () => {
-    const [menuIsOpen, setMenuIsOpen] = useState(false);
-
-    const toggleMenu = () => {
-        setMenuIsOpen(!menuIsOpen);
-        document.body.style.overflow = !menuIsOpen ? "hidden" : "auto";
-    };
-
-    const closeMenu = () => {
-        setMenuIsOpen(!menuIsOpen);
-    };
+    const { toggleMenu, closeMenu, menuIsOpen } = useToggleMenu();
 
     return (
         <div className='menuBurger-container'>
-            <button className='menuBurger-button' onClick={toggleMenu}>
-                <img src='/assets/ball.webp' />
-            </button>
+            <Button className={"menuBurger-button"} fnc={toggleMenu} src={"/assets/ball.webp"} alt={""}></Button>
             {menuIsOpen && <Nav closeMenu={closeMenu} />}
         </div>
     );

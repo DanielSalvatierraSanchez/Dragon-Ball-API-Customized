@@ -1,11 +1,11 @@
-import "./Button.css";
 import React from "react";
 
-const Button = ({ className, type, text }) => {
+const Button = ({ className, type, fnc, text, src, alt }) => {
     return (
         <>
-            <button className={className} type={type}>
+            <button className={className} type={type} onClick={fnc}>
                 {text}
+                <img src={src} alt={alt} />
             </button>
         </>
     );

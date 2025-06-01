@@ -7,7 +7,6 @@ const NewCharacters = () => {
     const { state } = useCharactersContext();
 
     const newCharacters = state.newCharacters;
-
     if (newCharacters.length === 0) {
         return (
             <>

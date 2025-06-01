@@ -10,7 +10,6 @@ const Transformations = () => {
     const { id } = useParams();
     const { state } = useCharacterByIdContext();
     const { transformations, character } = state;
-
     if (!transformations) return <Loader />;
 
     return (

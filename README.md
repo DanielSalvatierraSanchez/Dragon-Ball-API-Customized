@@ -17,8 +17,3 @@ Refactorizar en el proyecto anterior =>
     podrías crear un formulario que añada un nuevo personaje a ese estado global.
 -   El custom hook lo dejo a tu elección, pero intenta que tenga sentido y no esté hecho solo por hacerlo.
 -   Intenta añadirle algo más.
-
-CONTINUAR =>
-
--   crear custom hook
--   revisar codigo de las cartas por si puedo hacer un custom hook para reutilizarlo
