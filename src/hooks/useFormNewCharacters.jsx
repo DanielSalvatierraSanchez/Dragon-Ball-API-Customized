@@ -1,8 +1,10 @@
 import React, { useRef } from "react";
 import { useCharactersContext } from "../context/useCharactersContext";
+import { useNavigate } from "react-router-dom";
 
 const useFormNewCharacters = () => {
     const { dispatch } = useCharactersContext();
+    const navigate = useNavigate();
     const inputName = useRef();
     const inputImage = useRef();
     // const inputKi = useRef();
@@ -25,6 +27,8 @@ const useFormNewCharacters = () => {
         inputImage.current.value = "";
         // inputKi.current.value = "";
         // inputKiMax.current.value = "";
+
+        navigate("/new_characters");
     };
 
     return { inputName, inputImage, submit };
