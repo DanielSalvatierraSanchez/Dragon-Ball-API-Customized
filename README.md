@@ -20,4 +20,5 @@ Refactorizar en el proyecto anterior =>
 
 CONTINUAR =>
 
+-   crear custom hook
 -   revisar codigo de las cartas por si puedo hacer un custom hook para reutilizarlo

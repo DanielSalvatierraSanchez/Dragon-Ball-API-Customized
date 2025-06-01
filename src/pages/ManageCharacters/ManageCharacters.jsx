@@ -1,16 +1,14 @@
 import "./ManageCharacters.css";
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { useCharactersContext } from "../../context/useCharactersContext";
+import FormCreateCharacter from "../../components/FormCreateCharacter/FormCreateCharacter";
 
 const ManageCharacters = () => {
     const { dispatch } = useCharactersContext();
-
     const inputName = useRef();
+    const inputImage = useRef();
     // const inputKi = useRef();
     // const inputKiMax = useRef();
-    const inputImage = useRef();
-
-    const [form, setForm] = useState({});
 
     const submit = (e) => {
         e.preventDefault();
@@ -18,46 +16,23 @@ const ManageCharacters = () => {
         const newCharacter = {
             id: crypto.randomUUID(),
             name: inputName.current.value,
+            image: URL.createObjectURL(inputImage.current.files[0])
             // ki: inputKi.current.value,
             // kiMax: inputKiMax.current.value,
-            image: URL.createObjectURL(inputImage.current.files[0])
         };
 
         dispatch({ type: "ADD_CHARACTER", payload: newCharacter });
 
-        setForm({
-            ...form,
-            inputName: (inputName.current.value = ""),
-            // inputKi: (inputKi.current.value = ""),
-            // inputKiMax: (inputKiMax.current.value = ""),
-            inputImage: (inputImage.current.value = "")
-        });
+        inputName.current.value = "";
+        inputImage.current.value = "";
+        // inputKi.current.value = "";
+        // inputKiMax.current.value = "";
     };
 
     return (
         <div className='manageCharacters-container'>
             <h1 className='title-manageCharacters'>Creacion del personaje</h1>
-            <form className='manageCharacters-form' onSubmit={submit}>
-                <div className='nameCharacter-container'>
-                    <label htmlFor='name'>Nombre</label>
-                    <input ref={inputName} type='string' onChange={setForm} required={true} placeholder='Introduce el nombre'></input>
-                </div>
-                {/* <div className='kiCharacter-container'>
-                    <label htmlFor='ki'>Ki</label>
-                    <input ref={inputKi} type='number' onChange={setForm} required={true} placeholder='Introduce el ki'></input>
-                </div> */}
-                {/* <div className='kiMaxCharacter-container'>
-                    <label htmlFor='kiMax'>Ki maximo</label>
-                    <input ref={inputKiMax} type='number' placeholder='Introduce el ki max'></input>
-                </div> */}
-                <div className='imageCharacter-container'>
-                    <label htmlFor='image'>Imagen</label>
-                    <input ref={inputImage} type='file' name='character_image' required={true} placeholder='Sube una imagen'></input>
-                </div>
-                <button className='agreeCharacter' type='submit'>
-                    + Agregar personaje
-                </button>
-            </form>
+            <FormCreateCharacter inputName={inputName} inputImage={inputImage} submit={submit} />
         </div>
     );
 };

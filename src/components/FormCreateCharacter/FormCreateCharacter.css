@@ -1,0 +1,48 @@
+.manageCharacters-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    gap: 20px;
+}
+
+.nameCharacter-container,
+.kiCharacter-container,
+.kiMaxCharacter-container,
+.imageCharacter-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 10px;
+    text-shadow: var(--db-text-shadow-one);
+}
+
+.manageCharacters-form label {
+    padding: 5px;
+    text-shadow: var(--db-text-shadow-one);
+    font-size: xx-large;
+}
+
+.manageCharacters-form input {
+    height: 40px;
+    color: var(--db-color-b);
+    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+    font-size: large;
+    border-radius: 10px;
+}
+
+.manageCharacters-form button:hover {
+    animation: parpadeo 1s infinite;
+}
+
+.imageCharacter-container input {
+    max-width: 350px;
+    height: 20px;
+    color: var(--db-color-two);
+    font-size: 14px;
+    border-radius: 0px;
+}
