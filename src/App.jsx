@@ -11,6 +11,7 @@ import Footer from "./components/Footer/Footer";
 import ManageCharacters from "./pages/ManageCharacters/ManageCharacters";
 import NewCharacters from "./pages/NewCharacters/NewCharacters";
 import CharacterByIdProvider from "./providers/CharacterByIdProvider";
+import Modal from "./components/Modal/Modal";
 
 const App = () => {
     return (
@@ -36,6 +37,7 @@ const App = () => {
                     }
                 />
                 <Route path='/new_characters' element={<NewCharacters />} />
+                <Route path='/new_character/:id' element={<Modal />} />
                 <Route path='/manage_characters' element={<ManageCharacters />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>

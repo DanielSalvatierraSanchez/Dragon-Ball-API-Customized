@@ -18,6 +18,4 @@ Refactorizar en el proyecto anterior =>
 -   El custom hook lo dejo a tu elección, pero intenta que tenga sentido y no esté hecho solo por hacerlo.
 -   Intenta añadirle algo más.
 
--   Añadir el mismo nivel de detalle que tienen los que trae la API (nombre, Ki, transformaciones, etc.).
--   El nombre se sale de la tarjeta.
--   El input de tipo file no me gusta
+CONTINUAR crear page para almacenar modal con detalle del new char (creo Modal, creo PAGE NewCharacterDetail, App creo ruta)

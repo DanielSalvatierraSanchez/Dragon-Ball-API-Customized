@@ -1,14 +1,27 @@
+import Modal from "../../Modal/Modal";
 import "./NewCharactersCard.css";
-import React from "react";
+import React, { useState } from "react";
 
 const NewCharactersCard = ({ newCharacter }) => {
+    const [isOpenModal, setIsOpenModal] = useState(false);
+
+    const toggleModal = () => {
+        setIsOpenModal(!isOpenModal);
+    };
+
     return (
-        <div key={newCharacter.id} className='newCharacters-card'>
-            <p>{newCharacter.name}</p>
-            <img className='newCharacters-image-card' src={newCharacter.image} alt={newCharacter.name}></img>
-            <p>Ki: {newCharacter.ki}</p>
-            <p>Ki Max: {newCharacter.kiMax}</p>
-        </div>
+        <>
+            {!isOpenModal ? (
+                <div key={newCharacter.id} className='newCharacters-card' onClick={toggleModal}>
+                    <p className='newCharacters-card-name'>{newCharacter.name}</p>
+                    <img className='newCharacters-card-image' src={newCharacter.image} alt={newCharacter.name}></img>
+                    {/* <p className='newCharacters-card-ki'>Ki: {newCharacter.ki}</p>
+            <p className='newCharacters-card-ki-max'>Ki Max: {newCharacter.kiMax}</p> */}
+                </div>
+            ) : (
+                <Modal newCharacter={newCharacter} toggleModal={toggleModal} />
+            )}
+        </>
     );
 };
 

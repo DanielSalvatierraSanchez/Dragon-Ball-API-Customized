@@ -1,0 +1,64 @@
+.modal-card {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    margin: 50px;
+    z-index: 99;
+}
+
+.modal-name {
+    position: absolute;
+    top: 0;
+    font-size: xx-large;
+    text-shadow: var(--db-shadow-two);
+    cursor: default;
+}
+
+.modal-image {
+    max-width: 300px;
+    max-height: 320px;
+    margin: 20px;
+    padding: 20px;
+    overflow: visible;
+    transition: all 0.8s;
+    object-fit: contain;
+    cursor: pointer;
+}
+
+.modal-image:hover {
+    transform: scale(1.5);
+    z-index: 9;
+}
+
+.modal-ki,
+.modal-ki-max {
+    cursor: default;
+}
+
+.modal-button-close {
+    position: absolute;
+    bottom: 0;
+    background-color: transparent;
+    border: none;
+}
+
+.modal-button-close > img {
+    width: 80px;
+    cursor: pointer;
+}
+
+/* @media (width >= 1024px) {
+    .modal-card {
+        width: 150px;
+        height: 200px;
+    }
+
+    .modal-card p {
+        max-width: 150px;
+        margin-top: 150px;
+        font-size: xx-large;
+    }
+} */
