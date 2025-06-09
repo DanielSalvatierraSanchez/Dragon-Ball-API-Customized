@@ -43,7 +43,7 @@
 .characters-card p {
     position: absolute;
     max-width: 120px;
-    margin-top: 120px;
+    margin-top: 100px;
     font-size: x-large;
     text-shadow: var(--db-shadow-two);
     cursor: default;

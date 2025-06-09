@@ -17,3 +17,7 @@ Refactorizar en el proyecto anterior =>
     podrías crear un formulario que añada un nuevo personaje a ese estado global.
 -   El custom hook lo dejo a tu elección, pero intenta que tenga sentido y no esté hecho solo por hacerlo.
 -   Intenta añadirle algo más.
+
+-   Añadir el mismo nivel de detalle que tienen los que trae la API (nombre, Ki, transformaciones, etc.).
+-   El nombre se sale de la tarjeta.
+-   El input de tipo file no me gusta

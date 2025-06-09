@@ -28,31 +28,60 @@
 }
 
 .manageCharacters-form input {
+    width: 250px;
     height: 40px;
     color: var(--db-color-b);
+    border-radius: 10px;
     font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
     font-size: large;
-    border-radius: 10px;
 }
 
 .manageCharacters-form button:hover {
     animation: parpadeo 1s infinite;
 }
 
-.imageCharacter-container input {
-    max-width: 350px;
-    height: 20px;
+.imageCharacter-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 40px;
+    margin: 20px;
+    background-color: #008000;
+    border: 2px solid var(--db-color-b);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.imageCharacter-container:hover {
+    transform: scale(1.03);
+    transition: all 1s;
+}
+
+.imageCharacter-container > input {
+    position: absolute;
+    display: flex;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.image-name {
+    position: absolute;
+    height: 100%;
+    padding-top: 60px;
     color: var(--db-color-two);
-    font-size: 14px;
-    border-radius: 0px;
+    font-size: large;
+    text-shadow: var(--db-text-shadow-one);
 }
 
 .create-character {
     width: 250px;
     height: 50px;
+    margin: 30px;
     border-radius: 10px;
     border: 3px solid var(--db-color-two);
-    text-shadow: var(--db-text-shadow-one);
     font-size: x-large;
-    margin: 30px;
+    text-shadow: var(--db-text-shadow-one);
 }
