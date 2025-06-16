@@ -36,7 +36,6 @@ const App = () => {
                     }
                 />
                 <Route path='/new_characters' element={<NewCharacters />} />
-                {/* <Route path='/new_character/:id' element={<NewCharacterDetail />} /> */}
                 <Route path='/manage_characters' element={<ManageCharacters />} />
                 <Route path='*' element={<NotFound />} />
             </Routes>

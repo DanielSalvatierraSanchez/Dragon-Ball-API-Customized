@@ -5,10 +5,12 @@
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 80%;
+    height: 82dvh;
     gap: 30px;
     z-index: 99;
-    background-color: #556effdd;
+    background-image: url("/assets/tatami.webp");
+    background-size: auto 100%;
+    background-position: center;
 }
 
 .modal-name {
@@ -18,15 +20,14 @@
 }
 
 .modal-image {
-    width: 200px;
-    /* overflow: visible; */
+    width: 250px;
     object-fit: contain;
     transition: all 0.8s;
     cursor: pointer;
 }
 
 .modal-image:hover {
-    transform: scale(1.5);
+    transform: scale(1.4);
     z-index: 9;
 }
 
@@ -54,15 +55,8 @@
     width: 80px;
 }
 
-/* @media (width >= 1024px) {
+@media (width >= 630px) {
     .modal-card {
-        width: 150px;
-        height: 200px;
+        height: 85dvh;
     }
-
-    .modal-card p {
-        max-width: 150px;
-        margin-top: 150px;
-        font-size: xx-large;
-    }
-} */
+}

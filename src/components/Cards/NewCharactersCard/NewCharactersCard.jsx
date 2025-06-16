@@ -1,6 +1,6 @@
-import Modal from "../../Modal/Modal";
 import "./NewCharactersCard.css";
 import React, { useState } from "react";
+import Modal from "../../Modal/Modal";
 
 const NewCharactersCard = ({ newCharacter }) => {
     const [isOpenModal, setIsOpenModal] = useState(false);

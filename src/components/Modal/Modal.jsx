@@ -15,10 +15,3 @@ const Modal = ({ newCharacter, toggleModal }) => {
 };
 
 export default Modal;
-
-/*
-className={'modal-button-close'} type={} fnc={toggleModal} text={"Volver atras"} src={'./assets/ball.webp'} alt={"volver atras"}
-*/
-/* <button className='modal-button-close' onClick={toggleModal}>
-                <img src='./assets/ball.webp' alt='cerrar' />
-            </button> */
