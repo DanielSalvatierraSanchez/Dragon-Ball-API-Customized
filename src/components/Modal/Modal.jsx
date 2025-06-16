@@ -1,5 +1,6 @@
 import "./Modal.css";
 import React from "react";
+import Button from "../Button/Button";
 
 const Modal = ({ newCharacter, toggleModal }) => {
     return (
@@ -8,11 +9,16 @@ const Modal = ({ newCharacter, toggleModal }) => {
             <img className='modal-image' src={newCharacter.image} alt={newCharacter.name}></img>
             <p className='modal-ki'>Ki: {newCharacter.ki}</p>
             <p className='modal-ki-max'>Ki Max: {newCharacter.kiMax}</p>
-            <button className='modal-button-close' onClick={toggleModal}>
-                <img src='./assets/ball.webp' alt='cerrar' />
-            </button>
+            <Button className={"modal-button-close"} fnc={toggleModal} text={"Volver atras"} src={"./assets/ball.webp"} alt={"volver atras"} />
         </div>
     );
 };
 
 export default Modal;
+
+/*
+className={'modal-button-close'} type={} fnc={toggleModal} text={"Volver atras"} src={'./assets/ball.webp'} alt={"volver atras"}
+*/
+/* <button className='modal-button-close' onClick={toggleModal}>
+                <img src='./assets/ball.webp' alt='cerrar' />
+            </button> */

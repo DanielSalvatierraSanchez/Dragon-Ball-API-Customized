@@ -23,7 +23,6 @@ const FormCreateCharacter = ({ inputName, inputKi, inputKiMax, inputImage, image
                     <input ref={inputImage} type='file' name='character_image' required={true} onChange={getImageName}></input>
                     {imageName && <p className='image-name'>{imageName}</p>}
                 </div>
-
                 <Button className={"create-character"} type={"submit"} text={"+ Agregar personaje"} />
             </form>
         </>

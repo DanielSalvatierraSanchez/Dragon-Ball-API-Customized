@@ -1,30 +1,27 @@
 .modal-card {
-    position: fixed;
+    position: absolute;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 600px;
-    margin: 50px;
+    width: 100%;
+    height: 80%;
+    gap: 30px;
     z-index: 99;
+    background-color: #556effdd;
 }
 
 .modal-name {
-    position: absolute;
-    top: 0;
     font-size: xx-large;
     text-shadow: var(--db-shadow-two);
     cursor: default;
 }
 
 .modal-image {
-    max-width: 300px;
-    max-height: 320px;
-    margin: 20px;
-    padding: 20px;
-    overflow: visible;
-    transition: all 0.8s;
+    width: 200px;
+    /* overflow: visible; */
     object-fit: contain;
+    transition: all 0.8s;
     cursor: pointer;
 }
 
@@ -39,15 +36,22 @@
 }
 
 .modal-button-close {
-    position: absolute;
-    bottom: 0;
+    position: relative;
+    /* bottom: 0; */
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     background-color: transparent;
     border: none;
+    font-size: x-large;
+    text-shadow: var(--db-shadow-two);
+    cursor: pointer;
 }
 
 .modal-button-close > img {
     width: 80px;
-    cursor: pointer;
 }
 
 /* @media (width >= 1024px) {
